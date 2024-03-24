@@ -1,0 +1,234 @@
+@import url(./fonts/fonts.css);
+
+:root {
+    --color-black: rgb(0, 0, 0);
+    --color-grey1: rgb(32, 32, 32);
+    --color-grey2: rgb(196, 196, 196);
+    --color-grey3: rgb(82, 82, 82);
+    --color-grey4: rgb(61, 61, 61);
+    --color-wight: #fff;
+    --color-green1: rgb(114, 255, 58);
+    --color-green2: rgb(84, 190, 42);
+    --color-yellow: rgb(252, 255, 46);
+    --color-red1: rgb(255, 49, 49);
+    --color-red2: rgb(185, 44, 44);
+}
+
+body {
+    font-family: 'Lato';
+    color: var(--color-wight);
+    background-color: var(--color-grey1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 30px;
+}
+
+body .count_box {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    font-size: larger;
+}
+
+body .wright_box {
+    background-color: var(--color-grey3);
+    margin-bottom: 100px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border-color: var(--color-grey4);
+    border-style: solid;
+}
+
+body .wrong_box {
+    background-color: var(--color-grey3);
+    margin-bottom: 100px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border-color: var(--color-grey4);
+    border-style: solid;
+}
+
+body .clear {
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 100%;
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .clear:hover {
+    background-color: var(--color-grey2);
+    cursor: pointer;
+    width: 100px;
+    border-radius: 15px;
+    transition: 0.7s;
+}
+
+body .cleat:hover span {
+    display: none;
+}
+
+body .clear:hover::after {
+    content: "Clear";
+}
+
+body .button_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    width: 400px;
+    height: 100px;
+}
+
+body .icon_wright {
+    height: 25px;
+    width: 25px;
+}
+
+body .icon_wrong {
+    height: 30px;
+    width: 30px;
+}
+
+body .wright {
+    background-color: var(--color-green1);
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    border: none;
+}
+
+body .wrong {
+    background-color: var(--color-red1);
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    border: none;
+}
+
+body .wright:hover {
+    background-color: var(--color-green2);
+    cursor: pointer;
+    transition: 0.4;
+}
+
+body .wrong:hover {
+    background-color: var(--color-red2);
+    cursor: pointer;
+    transition: 0.4;
+}
+
+.info_box .color_info {
+    width: 100vw;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.info_box {
+    position: fixed;
+    bottom: 230px;
+}
+
+.color {
+    width: 475px;
+    height: 30px;
+    position: absolute;
+    bottom: 180px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.color .circles {
+    width: 100vw;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border-color: var(--color-wight);
+    border-style: solid;
+}
+
+.color #green {
+    background-color: var(--color-green1);
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    position: absolute;
+    margin-right: 300px;
+}
+
+.color #yellow {
+    background-color: var(--color-yellow);
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    position: absolute;
+    
+}
+
+.color #red {
+    background-color: var(--color-red1);
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    position: absolute;
+    margin-left: 300px;
+}
+
+footer {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+
+footer .percentage_scream {
+    background-color: var(--color-grey2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+footer .percentage {
+    background-color: var(--color-grey1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 10vh;
+    border-radius: 15px;
+}
+
+footer .feedback_light {
+    background-color: var(--color-green1);
+    border-radius: 100%;
+    display: inline;
+    width: 20px;
+    height: 20px;
+}
