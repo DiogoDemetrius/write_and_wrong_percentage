@@ -112,7 +112,7 @@ body .icon_wrong {
     width: 30px;
 }
 
-body .wright {
+body #wright {
     background-color: var(--color-green1);
     border-radius: 100%;
     width: 100px;
@@ -120,7 +120,7 @@ body .wright {
     border: none;
 }
 
-body .wrong {
+body #wrong {
     background-color: var(--color-red1);
     border-radius: 100%;
     width: 100px;
@@ -128,13 +128,13 @@ body .wrong {
     border: none;
 }
 
-body .wright:hover {
+body #wright:hover {
     background-color: var(--color-green2);
     cursor: pointer;
     transition: 0.4;
 }
 
-body .wrong:hover {
+body #wrong:hover {
     background-color: var(--color-red2);
     cursor: pointer;
     transition: 0.4;
