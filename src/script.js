@@ -2,6 +2,7 @@ const buttonsAdd = document.querySelectorAll(".button_add"); // Seletor dos bot�
 const countersElement = document.querySelectorAll(".counter"); // Seletor dos contadores
 const buttonClear = document.querySelector(".clear"); // Seletor do botão Clear
 const percentageScream = document.querySelector(".percentage"); // Seletor do elemento de porcentagem
+const footerFeedbackLight = document.querySelector(".feedback_light"); // Seletor do elemento de feedback
 
 let counters = []; // Array para armazenar os contadores individuais
 
@@ -31,6 +32,23 @@ function updatePercentage() {
     const total = counters.reduce((acc, currentValue) => acc + currentValue, 0);
     const percentageValue = total === 0 ? 0 : (counters[0] / total) * 100;
     percentageScream.textContent = `${percentageValue.toFixed(2)}%`;
+    updateBackgroundColor(); // Atualiza a cor de fundo
+}
+
+// Função para verificar e atualizar a cor de fundo
+function updateBackgroundColor() {
+    const percentageValue = parseFloat(percentageScream.textContent); // Obtém o valor da porcentagem como número
+    const colorRed = getComputedStyle(document.documentElement).getPropertyValue('--color-red1');
+    const colorYellow = getComputedStyle(document.documentElement).getPropertyValue('--color-yellow');
+    const colorGreen = getComputedStyle(document.documentElement).getPropertyValue('--color-green1');
+
+    if (percentageValue < 70) {
+        footerFeedbackLight.style.backgroundColor = colorRed; // Altera para vermelho se a porcentagem for menor que 70
+    } else if (percentageValue < 80) {
+        footerFeedbackLight.style.backgroundColor = colorYellow; // Altera para amarelo se a porcentagem for menor que 80
+    } else {
+        footerFeedbackLight.style.backgroundColor = colorGreen; // Mantém verde para porcentagens maiores ou iguais a 80
+    }
 }
 
 // Adicionar evento de clique a todos os botões
