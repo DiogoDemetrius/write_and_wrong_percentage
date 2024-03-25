@@ -200,6 +200,7 @@ body #wrong:hover {
 }
 
 footer {
+    background-color: var(--color-grey2);
     width: 100%;
     height: 110px;
     display: flex;
@@ -208,7 +209,6 @@ footer {
 }
 
 footer .percentage_scream {
-    background-color: var(--color-grey2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -228,7 +228,12 @@ footer .percentage {
 footer .feedback_light {
     background-color: var(--color-green1);
     border-radius: 100%;
-    display: inline;
+    display: flexbox;
+    position: fixed;
+    bottom: 40px;
+    right: 37%;
     width: 20px;
     height: 20px;
+    border-style: solid;
+    border-color: var(--color-wight);
 }
